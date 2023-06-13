@@ -1,0 +1,237 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+ul{
+  padding:0;
+}
+
+ul li{
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --main-background:  hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-size: 0.9375rem;
+  font-family: 'inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-background);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  max-width: 20.4375rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  margin: 2rem;
+}
+
+.image-box {
+  background-color: var(--accent);
+  border-radius: 8px 8px 0 0;
+
+}
+
+.main-image {
+  mix-blend-mode: multiply;
+  opacity: 75%;
+}
+
+.info-box {
+  padding: 0 1.9375rem;
+  text-align: center;
+}
+
+.title {
+  color:var(--main-heading-stats);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 0.875;
+  margin-block-start: 2.5rem;
+  margin-block-end: 1rem;
+}
+
+.purple-text {
+  color:var(--accent);
+}
+
+.intro-text {
+color: var(--main-paragraph);
+font-weight: 400;
+line-height: 1.66;
+margin-block-end: 2.5rem;
+}
+
+.bold-text {
+  color: var(--main-heading-stats);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.capital-text {
+  color: var(--stat-headings);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-family: 'font-family: 'Lexend Deca', sans-serif;';
+  letter-spacing: 0.0625em;
+}
+ 
+.grid{
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+} 
+
+@media screen and (min-width:64rem) {
+  .wrapper {
+    max-width: 69.375rem;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 8px;
+  }
+
+  .image-box {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-radius: 0 8px 8px 0;
+  }  
+  .main-image {
+    min-height: 100%; 
+    border-radius: 0 8px 8px 0;
+    }
+
+  .info-box {
+    padding-inline-start: 4.4375rem;
+    padding-block-start: 4.5rem ;
+    padding-block-end: 3.5rem;
+    text-align: start;
+    grid-column: 1/2;
+   }
+
+  .title {
+    color: var(--main-heading-stats);
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.22;
+    margin-block-start: 0;
+    margin-block-end: 1.5625rem;
+    padding-inline-end: 5rem;
+  }
+
+  .intro-text {
+    color: var(--main-paragraph);
+    font-weight: 400;
+    line-height: 1.66;
+    margin-block-start: 0;
+    margin-block-end: 4.5rem;
+    padding-inline-end: 6rem;
+    }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3.75rem;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 0rem;
+    padding-inline-end: 130px;
+  } 
+  }
+
+
+
+
+
+
+
+
